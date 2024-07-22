@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>svt おすすめsong</title>
+</head>
+<body>
+ 
+
+<header>
+  <h2>今、どんな気分？</h2>
+</header>
+
+<a href="" class="btn btn-border-shadow btn-border-shadow--color2">リセット</a>
+
+<main>
+  <ul>
+    <li id="age_btn" class="btn btn-border-shadow btn-border-shadow--color2">アゲッ♪ </li>
+    <li id="sage_btn"class="btn">サゲ~</li>
+    <li id="emo_btn"class="btn">エモ☻</li>
+  </ul>
+  <div>そんなあなたにSEVENTEENのおすすめの曲は... <img src="./img/mingyu_cat.png" alt="" id="mingyu"></div> <div id="pc_hands"><img src="./img/svt.png" alt=""></div></div>
+  <div id="judgment"></div>
+  <div id="music">
+    <a href="https://www.youtube.com/playlist?list=PL_Cqw69_m_yzWM8F-lKnfe8HhSb4xE1va" target="_blank" id="youtube">
+      <img src="./img/saisei.png" alt="">
+    </a>
+  </div>
+  <!-- <a href="https://www.youtube.com/playlist?list=PL_Cqw69_m_yzWM8F-lKnfe8HhSb4xE1va" target="_blank" class="btn btn-border-shadow btn-border-shadow--color3" id="youtube">▶Youtube</a> -->
+</ul> 
+
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+$("#age_btn").on("click",function(){
+    const r = Math.random()*3;
+    const n = Math.ceil(r);
+    console.log(n);
+    if(n == 1){
+      　$("#pc_hands").html('<img id="age01" src="./img/HOT.png">')
+        $("#age01").css("width","250px");
+        $("#age01").append('<a href="https://www.youtube.com/playlist?list=PL_Cqw69_m_yzWM8F-lKnfe8HhSb4xE1va" target="_blank">')
+        $("#judgment").html("~HOT~")
+        $("#judgment").css("color","#ed629c",);
+        $("#youtube").attr("href", "https://www.youtube.com/watch?v=gRnuFC4Ualw");
+    }
+    if(n == 2){
+        $("#pc_hands").html('<img id="age02" src="./img/callcall.png">')
+        $("#age02").css("width","250px");
+        $("#judgment").html("~CALL CALL CALL!~")
+        $("#judgment").css("color","#ed629c");
+        $("#youtube").attr("href", "https://youtu.be/BgR_HJ7aGDY?si=6-XdbXPHkT74AOwN");
+    }
+    if(n == 3){
+      　$("#pc_hands").html('<img id="age03" src="./img/ajuna.png">')
+        $("#age03").css("width","250px");
+        $("#judgment").html("~아주 NICE (VERY NICE)~")
+        $("#judgment").css("color","#ed629c");
+        $("#youtube").attr("href", "https://youtu.be/KvA9T3MputA?si=u4SIJFQzHcQjibBo");
+    }
+});
+
+$("#sage_btn").on("click",function(){
+    const r = Math.random()*3;
+    const n = Math.ceil(r);
+    console.log(n);
+    if(n == 1){
+      　$("#pc_hands").html('<img id="sage01" src="./img/FML.png">');
+        $("#sage01").css("width","250px");
+        $("#judgment").html("~F*ck My Life~")
+        $("#judgment").css("color","#479bef");
+        $("#youtube").attr("href", "https://youtu.be/9kpuOoIh3wU?si=eW5Q2P-Ew-rZZ3Yl");
+    }
+    if(n == 2){
+        $("#pc_hands").html('<img id="sage02" src="./img/urushipa.png">')
+        $("#sage02").css("width","250px");
+        $("#judgment").html("~울고 싶지 않아 (Don’t Wanna Cry)~")
+        $("#judgment").css("color","#479bef");
+        $("#youtube").attr("href", "https://youtu.be/zEkg4GBQumc?si=heZj0Cw5BeqWOORM");
+    }
+    if(n == 3){
+      　$("#pc_hands").html('<img id="sage03" src="./img/17.png">')
+        $("#sage03").css("width","250px");
+        $("#judgment").html("~Cheers to youth~")
+        $("#judgment").css("color","#479bef");
+        $("#youtube").attr("href", "https://youtu.be/bw4AuPrLWeA?si=cG1dCDT56B_6d9_H");
+    }
+});
+
+$("#emo_btn").on("click",function(){
+    const r = Math.random()*3;
+    const n = Math.ceil(r);
+    console.log(n);
+    if(n == 1){
+      　$("#pc_hands").html('<img id="emo01" src="./img/byuriho.png">');
+        $("#emo01").css("width","250px");
+        $("#judgment").html("~BEAUTIFUL~")
+        $("#judgment").css("color","#f8e512");
+        $("#youtube").attr("href", "https://youtu.be/QfGl0_aGAPo?si=oLJBFfVEh-VbpNTs");
+    }
+    if(n == 2){
+        $("#pc_hands").html('<img id="emo02" src="./img/attacca.png">')
+        $("#emo02").css("width","250px");
+        $("#judgment").html("~소용돌이(To you)~")
+        $("#judgment").css("color","#f8e512");
+        $("#youtube").attr("href", "https://youtu.be/n9ta1Pgeu80?si=rxREjkmVSzArfq5D");
+    }
+    if(n == 3){
+      　$("#pc_hands").html('<img id="emo03" src="./img/maihana.png">')
+        $("#emo03").css("width","250px");
+        $("#judgment").html("~舞い落ちる花びら (Fallin' Flower)~")
+        $("#judgment").css("color","#f8e512");
+        $("#youtube").attr("href", "https://youtu.be/u4iDL3c0T1c?si=Oy_e37a4tZmC4fov");
+    }
+});
+
+rotationAnimationLoop(0);
+   
+function rotationAnimationLoop(deg){
+  rotationAnimation(deg);
+  setTimeout(() => {
+    rotationAnimationLoop(deg+5);
+  }, 15);
+}
+
+function rotationAnimation(deg){
+  $("#mingyu").css("-webkit-transform","rotate(" + deg + "deg)");
+}
+
+</script>
+
+<a href="https://www.seventeen-17.jp/" target="_blank" class="btn btn-border-shadow btn-border-shadow--color4">SEVENTEENって？</a>
+</body>
+</html>
